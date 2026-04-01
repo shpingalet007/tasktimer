@@ -4,7 +4,7 @@
 <p align="center">
     <a href="https://travis-ci.org/onury/tasktimer"><img src="https://img.shields.io/travis/onury/tasktimer.svg?branch=master&style=flat-square" alt="Build Status" /></a>
     <a href='https://coveralls.io/github/shpingalet007/tasktimer?branch=fix/coveralls'><img src='https://coveralls.io/repos/github/shpingalet007/tasktimer/badge.svg?branch=fix/coveralls' alt='Coverage Status' /></a>
-    <a href="https://snyk.io/test/github/onury/tasktimer"><img src="https://snyk.io/test/github/onury/tasktimer/badge.svg?style=flat-square" alt="Known Vulnerabilities" /></a>
+    <a href="https://snyk.io/test/github/shpingalet007/tasktimer"><img src="https://snyk.io/test/github/shpingalet007/tasktimer/badge.svg?style=flat-square" alt="Known Vulnerabilities" /></a>
     <a href="https://www.npmjs.com/package/tasktimer"><img src="https://img.shields.io/npm/dm/tasktimer.svg?style=flat-square" alt="Downloads" /></a>
     <a href="https://github.com/onury/tasktimer/blob/master/LICENSE"><img src="http://img.shields.io/npm/l/tasktimer.svg?style=flat-square" alt="License" /></a>
     <br />
