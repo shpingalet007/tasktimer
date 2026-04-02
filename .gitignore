@@ -2,6 +2,7 @@
 /design/
 /wiki/
 /docs/
+/lib/
 /node_modules/
 /.grunt/
 _SpecRunner.html
