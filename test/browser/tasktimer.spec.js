@@ -49,7 +49,8 @@ describe('TaskTimer (Browser/Puppeteer)', () => {
 
     test('page / html', async () => {
         // "TaskTimer" text on page
-        await expect(page).toMatch('TaskTimer');
+        const content = await page.content();
+        expect(content).toMatch('TaskTimer');
     });
 
     test('window.tasktimer', async () => {
