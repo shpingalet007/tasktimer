@@ -1,5 +1,5 @@
 const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const libraryName = 'tasktimer';
@@ -58,9 +58,7 @@ module.exports = env => {
         stats: {
             colors: true,
             modules: false,
-            reasons: true,
-            // suppress "export not found" warnings about re-exported types
-            warningsFilter: /export .* was not found in/
+            reasons: true
         },
         plugins: [
             new ForkTsCheckerWebpackPlugin()
@@ -93,19 +91,16 @@ module.exports = env => {
         if (env.WEBPACK_OUT === 'production') {
             config.devtool = 'source-map';
             config.output.filename = libraryName.toLowerCase() + '.min.js';
-            config.optimization.minimizer.push(new UglifyJsPlugin({
+            config.optimization.minimizer.push(new TerserPlugin({
                 test: /\.js$/,
-                sourceMap: true,
-                uglifyOptions: {
-                    ie8: false,
+                terserOptions: {
                     ecma: 5,
-                    output: {
-                        comments: false,
-                        beautify: false
+                    format: {
+                        comments: false
                     },
-                    compress: true,
-                    warnings: true
-                }
+                    compress: true
+                },
+                extractComments: false
             }));
         }
     }

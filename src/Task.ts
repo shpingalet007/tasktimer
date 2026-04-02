@@ -202,7 +202,7 @@ class Task {
         // return faster if already completed
         if (this._markedCompleted) return true;
         return Boolean((this.totalRuns && this.currentRuns >= this.totalRuns)
-            || (this._.stopDate && Date.now() >= this._.stopDate));
+            || (this._.stopDate && Date.now() >= Number(this._.stopDate)));
     }
 
     /**
@@ -217,7 +217,7 @@ class Task {
         const tickCount = this._.startDate
             ? Math.ceil((Date.now() - Number(this._.startDate)) / this._timer.interval)
             : this._timer.tickCount;
-        const timeToRun = !this._.startDate || Date.now() >= this._.startDate;
+        const timeToRun = !this._.startDate || Date.now() >= Number(this._.startDate);
         const onInterval = tickCount > this.tickDelay && (tickCount - this.tickDelay) % this.tickInterval === 0;
         return Boolean(timeToRun && onInterval);
     }
