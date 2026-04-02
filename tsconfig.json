@@ -54,7 +54,7 @@
         "pretty": true,
         "removeComments": false,
         "skipLibCheck": false,
-        "sourceMap": false,
+        "sourceMap": true,
         "strict": false,
         "strictFunctionTypes": false,
         "strictPropertyInitialization": false,
